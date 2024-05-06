@@ -1,0 +1,1 @@
+Welcome to the IT Assets Management System! This system is designed to help organizations keep track of their IT assets efficiently. Whether you're managing computers, servers, software licenses, or any other IT equipment, this system provides the tools you need to organize, track, and manage your assets effectively.
