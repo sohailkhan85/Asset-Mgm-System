@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+
+var dtp = new DateTimePicker('.demo',{
+    pickerClass: 'datetimepicker',
+    days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+    months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+    daySuffix:["th", "st", "nd", "rd"],
+    nextText:'&raquo;',//>>
+    prevText:'&laquo;',//<<
+    dayShort: 2, // Length of day-abbreviations
+    monthShort: 3, // Length of month-abbreviations
+    startDay: 1, // Can be 0 (Sunday) through 6 (Saturday).
+    timePicker: false, // time picker mode
+    timePickerOnly: false,           
+    timePickerFormat:24,
+    minuteIncrement:1,
+    yearPicker: true,
+    format: 'd/m/Y',
+    allowEmpty: false,
+    allowInput: false,
+    startView: 'month', 
+    positionOffset: { x: 0, y: 0 },
+    minDate: null,
+    maxDate: null,  
+    inputOutputFormat: 'T', 
+    startDate:null, // The date the picker is to start at. 
+    debug: false,
+    toggleElementsOnly:true,
+    toggleElements: null
+});
+
+var dtp = new DateTimePicker('.demo',{
+    beforeShow: null,
+    onClose: null,
+    onSelect: null,
+    onChange: null
+});

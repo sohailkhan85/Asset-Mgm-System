@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>iTickets</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body>
+<table width="1345"  align="center" cellpadding="0" cellspacing="0"  bgcolor="F1F4FE" >
+  <tr>
+    <td height="75" colspan="2">
+    <img src="images/header.gif" width="1345" height="125" />
+    </td>
+    </tr>
+
+  <!--	<tr><td>&nbsp;</td></tr>
+	<tr><td>&nbsp;</td></tr>
+	<tr><td>&nbsp;</td></tr>-->
+            <tr>
+           		<td>
+                	<table>
+                    	<tr>
+           
+           <td><a href="mainpage.php"><img src="images/itickets.gif" width="150" style="cursor:pointer"/></a></td>
+           <td><a href="newiticket.php"><img src="images/new-iticket.gif" width="150" style="cursor:pointer"/></a></td>
+           <td><a href="pclicenses.php"><img src="images/pclicenses.gif" width="150" style="cursor:pointer" /></a></td>
+                    <td><a href="adduser.php"><img src="images/adduser.gif" width="150" style="cursor:pointer" /></a></td>
+           <td><a href="viewusers.php"><img src="images/viewusers.gif" width="150" style="cursor:pointer" /></a></td>
+           <td><a href="dashboard.php"><img src="images/dashboard.gif" width="150" style="cursor:pointer" /></a></td>
+           <td width="100">{if $display_name=='Sohail' || $display_name=='Srinivas' || $display_name=='Administrator'}<a href="export_iTicket.php"><img src="images/exp_iTickets.gif" width="150" style="cursor:pointer" /></a>{/if}</td>
+           <td width="100">&nbsp;</td>
+           <td width="100">&nbsp;</td>
+            <td width="100">&nbsp;</td>
+           <td width="100">&nbsp;</td>
+           <td width="100">&nbsp;</td>
+           <td width="100">&nbsp;</td>
+           <td width="100">&nbsp;</td>
+          
+           <td width="100" id="normal_text"><strong><font size=+1>{$display_name}</font></strong></td>
+          				 	
+            </tr>
+           <tr> 	   
+                   <td width="100">&nbsp;</td>
+          		<td width="100">&nbsp;</td>
+          	 	<td width="100">&nbsp;</td>
+           		 <td width="100">&nbsp;</td>
+           		<td width="100">&nbsp;</td>
+                 <td width="100">&nbsp;</td>
+           		<td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                 <td width="100">&nbsp;</td>
+           		<td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                       		<td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                <td width="75"><a href="changepass.php" style="cursor:pointer"><input type="button" class="button" value="Change Password"/></a></td>
+            </tr>
+            <tr>
+            		<td width="100">&nbsp;</td>
+                 <td width="100">&nbsp;</td>
+           		<td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                 <td width="100">&nbsp;</td>
+           		<td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                 <td width="100">&nbsp;</td>
+           		<td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                 <td width="100">&nbsp;</td>
+                  <td width="100">&nbsp;</td>
+                  <td width="100">&nbsp;</td>
+                    <td width="100" colspan="5">
+       					 <a href="index.php?val=o"><input type="button" value="SIGN OUT" name="out" id="out" class="button" style="cursor:pointer"/></a>
+       				 </td>
+            </tr>
+            
+            
+             </table>
+             </td>
+           </tr>
+
+    
+    
+  <tr>
+ 
+    <td width="1345" bgcolor="F1F4FE"><form id="iticket" method="post" name="iticket" onsubmit="return validate()" action="newiticket.php" >
+    <input type="hidden" name="itick_id" id="itick_id" value="{$itick_id}" />
+      <table width="850" height="766" border="1" cellpadding="0" cellspacing="0" align="center" class="tbl" >
+
+        <tr>
+          <td height="31" colspan="2" bgcolor="#0390B8" id="heading">{$username} / {$companyname}</td>
+
+          
+        </tr>
+
+        <tr>
+          <td width="319" height="43" id="normal_text"><font size="+1"><strong>Asset ID</strong></font></td>
+          <td width="381">&nbsp;&nbsp;<font size="+1">{$assetid}</font>
+
+          </td>
+        </tr>
+               <tr>
+          <td width="319" height="43"  id="normal_text"><font size="+1"><strong>User Name</strong></font></td>
+          <td width="381">&nbsp;&nbsp;<font size="+1">{$username}</font>
+
+
+          </td>
+        </tr>
+        <tr>
+          <td width="319" height="43"  id="normal_text"><font size="+1"><strong>Company</strong></font></td>
+          <td width="381">
+			&nbsp;&nbsp;<font size="+1">{$companyname}</font>
+         
+          </td>
+        </tr>
+         <tr>
+          <td width="319" height="43"  id="normal_text"><font size="+1"><strong>Email</strong></font></td>
+          <td width="381">&nbsp;&nbsp;<font size="+1">{$Email}</font></td>
+        </tr>
+ 
+         <tr>
+          <td width="319" height="43"  id="normal_text"><font size="+1"><strong>Operating System</strong></font></td>
+          <td width="381">&nbsp;&nbsp;<font size="+1">{$osname}</font></td>
+        </tr>
+                 <tr>
+          <td width="319" height="43"  id="normal_text"><font size="+1"><strong>Operating System - Product Key</strong></font></td>
+          <td width="381">
+          &nbsp;&nbsp;<font size="+1">{$oskey}</font>
+          </td>
+        </tr>
+        <tr>
+          <td width="319" height="43"  id="normal_text"><font size="+1"><strong>Office Name</strong></font></td>
+          <td width="381">&nbsp;&nbsp;<font size="+1">{$officename}</font>
+    
+          </td>
+                  <tr>
+          <td width="319" height="43"  id="normal_text"><font size="+1"><strong>Office Product Key</strong></font></td>
+          <td width="381">&nbsp;&nbsp;<font size="+1">{$officekey}</font>
+    
+          </td>
+                  <tr>
+          <td width="319" height="43"  id="normal_text"><font size="+1"><strong>IP Address</strong></font></td>
+          <td width="381">&nbsp;&nbsp;<font size="+1">{$ipaddress}</font>
+          </td>
+            <tr>
+          <td width="319" height="43"  id="normal_text"><font size="+1"><strong>Gateway</strong></font></td>
+          <td width="381">&nbsp;&nbsp;<font size="+1">{$gateway}</font>
+    
+          </td>
+             <tr>
+          <td width="319" height="43"  id="normal_text"><font size="+1"><strong>Type</strong></font></td>
+          <td width="381">&nbsp;&nbsp;<font size="+1">{$type}</font>
+          </td>
+                  <tr>
+          <td width="319" height="43"  id="normal_text"><font size="+1"><strong>CPU Type</strong></font></td>
+          <td width="381">&nbsp;&nbsp;<font size="+1">{$cpu_type}</font>
+    
+          </td>
+                            <tr>
+          <td width="319" height="43"  id="normal_text"><font size="+1"><strong>Hard Drive</strong></font></td>
+          <td width="381">&nbsp;&nbsp;<font size="+1">{$harddrive}</font>
+    
+          </td>
+                                      <tr>
+          <td width="319" height="43"  id="normal_text"><font size="+1"><strong>RAM</strong></font></td>
+          <td width="381">&nbsp;&nbsp;<font size="+1">{$ram}</font>
+    
+          </td>
+             <tr>
+          <td width="319" height="43"  id="normal_text"><font size="+1"><strong>Model</strong></font></td>
+          <td width="381">&nbsp;&nbsp;<font size="+1">{$model}</font>
+    
+          </td>
+            <tr>
+          <td width="319" height="43"  id="normal_text"><font size="+1"><strong>Manufacturer</strong></font></td>
+          <td width="381">&nbsp;&nbsp;<font size="+1">{$manufacturer}</font>
+    
+          </td>
+
+        </tr>
+
+      </table>
+    </form></td>
+    <!--<td width="84">&nbsp;</td>-->
+  </tr>
+
+    <th colspan="3" bgcolor="#0390B8" height="25">Copyright © 2018 IT- DEPT/SSW GROUP. All rights reserved.</th>
+  </tr>
+  <!-- <tr>
+      <td colspan="3" height="21">&nbsp;</td>
+    </tr
+  <tr>
+ <td colspan="3" height="25">&nbsp;</td>
+ </tr>-->
+</table>
+</body>
+</html>

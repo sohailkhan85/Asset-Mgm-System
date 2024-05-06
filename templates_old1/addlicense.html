@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>iTickets</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+{literal}
+<script type="text/javascript">
+function validate()
+{
+	
+	//alert("Inside Validate");
+	//document.getElementById('company').disabled= "";
+	
+	if(document.addlicense.type.value=="")
+	{
+		alert("Please make sure that Type is not left blank.");
+		document.addlicense.type.focus();
+		return false;
+	}
+	else if(document.addlicense.cpu_type.value=="")
+	{
+		alert("Please make sure that CPU TYPE is not left blank.");
+		document.addlicense.cpu_type.focus();
+		return false;
+	}
+		else if(document.addlicense.cpu_type.value=="")
+	{
+		alert("Please make sure that CPU TYPE is not left blank.");
+		document.addlicense.cpu_type.focus();
+		return false;
+	}
+		else if(document.addlicense.harddrive.value=="")
+	{
+		alert("Please make sure that HARDDRIVE is not left blank.");
+		document.addlicense.harddrive.focus();
+		return false;
+	}
+		else if(document.addlicense.ram.value=="")
+	{
+		alert("Please make sure that RAM is not left blank.");
+		document.addlicense.ram.focus();
+		return false;
+	}
+		else if(document.addlicense.osname.value=="")
+	{
+		alert("Please make sure that Operating System Name is not left blank.");
+		document.addlicense.osname.focus();
+		return false;
+	}
+			else if(document.addlicense.oskey.value=="")
+	{
+		alert("Please make sure that Operating System Key is not left blank.");
+		document.addlicense.oskey.focus();
+		return false;
+	}
+		else if(document.addlicense.officename.value=="")
+	{
+		alert("Please make sure that Office Name is not left blank.");
+		document.addlicense.officename.focus();
+		return false;
+	}
+	
+	else if(document.addlicense.officekey.value=="")
+	{
+		alert("Please make sure that Office Name is not left blank.");
+		document.addlicense.officekey.focus();
+		return false;
+	}
+	
+	else
+	{
+		//alert("inside Submit");
+		//document.getElementById('loginform').submit();
+		document.addlicense.submit();
+		return true;
+	}
+
+}
+
+
+</script>
+{/literal}
+
+</head>
+<body>
+<table width="1345"  align="center" cellpadding="0" cellspacing="0"  bgcolor="F1F4FE" >
+  <tr>
+    <td height="75" colspan="2">
+    <img src="images/header.gif" width="1345" height="125" />
+    </td>
+    </tr>
+
+  <!--	<tr><td>&nbsp;</td></tr>
+	<tr><td>&nbsp;</td></tr>
+	<tr><td>&nbsp;</td></tr>-->
+            <tr>
+           		<td>
+                	<table>
+                    	<tr>
+           
+           <td><a href="mainpage.php"><img src="images/itickets.gif" width="150" style="cursor:pointer"/></a></td>
+           <td><a href="newiticket.php"><img src="images/new-iticket.gif" width="150" style="cursor:pointer"/></a></td>
+           <td><a href="pclicenses.php"><img src="images/pclicenses.gif" width="150" style="cursor:pointer" /></a></td>
+                    <td><a href="adduser.php"><img src="images/adduser.gif" width="150" style="cursor:pointer" /></a></td>
+           <td><a href="viewusers.php"><img src="images/viewusers.gif" width="150" style="cursor:pointer" /></a></td>
+           <td><a href="dashboard.php"><img src="images/dashboard.gif" width="150" style="cursor:pointer" /></a></td>
+           <td width="100"><a href="export_iTicket.php"><img src="images/exp_iTickets.gif" width="150" style="cursor:pointer" /></a></td>
+           <td width="100">&nbsp;</td>
+           <td width="100">&nbsp;</td>
+            <td width="100">&nbsp;</td>
+           <td width="100">&nbsp;</td>
+           <td width="100">&nbsp;</td>
+           <td width="100">&nbsp;</td>
+           <td width="100">&nbsp;</td>
+ 
+          
+           <td width="100" id="normal_text"><strong><font size=+1>{$display_name}</font></strong></td>
+          				 	
+            </tr>
+           <tr> 	   
+                   <td width="100">&nbsp;</td>
+          		<td width="100">&nbsp;</td>
+          	 	<td width="100">&nbsp;</td>
+           		 <td width="100">&nbsp;</td>
+           		<td width="100">&nbsp;</td>
+                 <td width="100">&nbsp;</td>
+           		<td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                 <td width="100">&nbsp;</td>
+           		<td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+
+                <td width="75"><a href="changepass.php" style="cursor:pointer"><input type="button" class="button" value="Change Password"/></a></td>
+            </tr>
+            <tr>
+            		<td width="100">&nbsp;</td>
+                 <td width="100">&nbsp;</td>
+           		<td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                 <td width="100">&nbsp;</td>
+           		<td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                 <td width="100">&nbsp;</td>
+           		<td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                    <td width="100" colspan="5">
+       					 <a href="index.php?val=o"><input type="button" value="SIGN OUT" name="out" id="out" class="button" style="cursor:pointer"/></a>
+       				 </td>
+            </tr>
+            
+            
+             </table>
+             </td>
+           </tr>
+
+
+    
+  <tr>
+ 
+    <td width="1345" bgcolor="F1F4FE"><form id="addlicense" method="post" name="addlicense" onsubmit="return validate()" action="addlicense.php" >
+
+    <input type="hidden" name="assetid" id="assetid" value="{$assetid}" />
+      <table width="800" height="373" border="0" cellpadding="0" cellspacing="0" align="center" class="tbl" >
+		    		<!--<tr><td colspan="10">&nbsp;</td></tr>-->
+	    	   <tr><td colspan="10" class="red"><strong><font size="+2"> {if $added}License Added Successfully.{elseif $updated}License Updated Successfully.{/if}</font></strong></td></tr>
+        <tr>
+          <td height="30" colspan="2" bgcolor="#0390B8" id="heading">{if $assetid}{$username}{else}Add New User{/if}</td>
+
+          
+        </tr>
+        <tr>
+        	<td height="31" colspan="2">
+            <strong>Fields mark with red(<span class="red">*</span>) are mandatory fields.</strong>
+            </td>
+        </tr>
+        <tr>
+          <td width="251" height="43" id="normal_text">Company Name<span class="red">*</span></td>
+          <td width="449">
+          						<select name="company">
+                                
+                                <option>{$companyname}</option>
+                                
+
+								</select>
+          </td>
+        </tr>
+               <tr>
+          <td width="251" height="43"  id="normal_text">User Name<span class="red">*</span></td>
+          <td width="449">
+          <input type="text" name="username" value="{$username}" disabled="disabled" />
+          </td>
+        </tr>
+        <tr>
+          <td width="251" height="43"  id="normal_text">Email</td>
+          <td width="449">
+			<input type="text" name="email" value="{$email}" disabled="disabled"/>
+          </td>
+        </tr>
+        
+ 
+         <tr>
+          <td width="251" height="43"  id="normal_text">Department</td>
+          <td width="449"><input type="text" name="dept" value="{$dept}" disabled="disabled" /></td>
+          </tr>
+           <tr>
+          <td height="30" colspan="2" bgcolor="#0390B8" id="heading">PC INFO</td>
+         
+          </tr>
+                   <tr>
+          <td width="251" height="43"  id="normal_text">Computer Name</td>
+          <td width="449"><input type="text" name="computername" value="{$computername}"  /></td>
+          </tr>
+                   <tr>
+          <td width="251" height="43"  id="normal_text">Type<span class="red">*</span></td>
+          <td width="449">
+          <select name="type">
+          <option value="" style="display:none">Select Type</option>
+          <option value="desktop" {if $type=='desktop'} selected="selected"{/if}>Desktop</option>
+          <option value="laptop" {if $type=='laptop'} selected="selected"{/if}>Laptop</option>
+          <option value="server" {if $type=='server'} selected="selected"{/if}>Server</option>
+          </select>
+          </td>
+          </tr>
+                   <tr>
+          <td width="251" height="43"  id="normal_text">CPU Type<span class="red">*</span></td>
+          <td width="449"><input type="text" name="cpu_type" value="{$cpu_type}"  /></td>
+          </tr>
+                   <tr>
+          <td width="251" height="43"  id="normal_text">Hard Drive<span class="red">*</span></td>
+          <td width="449"><input type="text" name="harddrive" value="{$harddrive}"  /></td>
+          </tr>
+                   <tr>
+          <td width="251" height="43"  id="normal_text">Manufacturer</td>
+          <td width="449"><input type="text" name="manufacturer" value="{$manufacturer}"  /></td>
+          </tr>
+                   <tr>
+          <td width="251" height="43"  id="normal_text">Model</td>
+          <td width="449"><input type="text" name="model" value="{$model}"  /></td>
+          </tr>
+                   <tr>
+          <td width="251" height="43"  id="normal_text">Default Printer</td>
+          <td width="449"><input type="text" name="default_printer" value="{$default_printer}"  /></td>
+          </tr>
+                   <tr>
+          <td width="251" height="43"  id="normal_text">Gateway</td>
+          <td width="449"><input type="text" name="gateway" value="{$gateway}"  /></td>
+          </tr>
+                   <tr>
+          <td width="251" height="43"  id="normal_text">IP Address</td>
+          <td width="449"><input type="text" name="ipaddress" value="{$ipaddress}"  /></td>
+          </tr>
+                   <tr>
+          <td width="251" height="43"  id="normal_text">RAM<span class="red">*</span></td>
+          <td width="449"><input type="text" name="ram" value="{$ram}"  /></td>
+          </tr>
+                   <tr>
+          <td width="251" height="43"  id="normal_text">Operating System Name<span class="red">*</span></td>
+          <td width="449">
+          <select name="osname">
+           <option value="" style="display:none;">Select Operating System</option>
+          <option value="WIN 10 PRO 64 BIT"{if $osname=='WIN 10 PRO 64 BIT'} selected="selected"{/if}>WIN 10 PRO 64 BIT</option>
+           <option value="WIN 10 PRO 32 BIT" {if $osname=='WIN 10 PRO 32 BIT'} selected="selected"{/if}>WIN 10 PRO 32 BIT</option>
+            <option value="WIN 7 PRO 64 BIT" {if $osname=='WIN 7 PRO 64 BIT'} selected="selected"{/if}>WIN 7 PRO 64 BIT</option>
+             <option value="WIN 7 PRO 32 BIT" {if $osname=='WIN 7 PRO 32 BIT'} selected="selected"{/if}>WIN 7 PRO 32 BIT</option>
+              <option value="WIN 8 PRO 64 BIT" {if $osname=='WIN 8 PRO 64 BIT'} selected="selected"{/if}>WIN 8 PRO 64 BIT</option>
+              <option value="WIN 8 PRO 32 BIT" {if $osname=='WIN 8 PRO 32 BIT'} selected="selected"{/if}>WIN 8 PRO 32 BIT</option>
+              <option value="WIN VISTA BUS 32 BIT" {if $osname=='WIN VISTA BUS 32 BIT'} selected="selected"{/if}>WIN VISTA BUS 32 BIT</option>
+              <option value="WIN VISTA HOME 32 BIT" {if $osname=='WIN VISTA HOME 32 BIT'} selected="selected"{/if}>WIN VISTA HOME 32 BIT</option>
+              <option value="WIN XP PRO 32 BIT" {if $osname=='WIN XP PRO 32 BIT'} selected="selected"{/if}>WIN XP PRO 32 BIT</option>
+              <option value="WIN XP HOME 32 BIT" {if $osname=='WIN XP PRO 32 BIT'} selected="selected"{/if}>WIN XP HOME 32 BIT</option>
+              <option value="WIN SERVER 2016 STD MAK B" {if $osname=='WIN SERVER 2016 STD MAK B'} selected="selected"{/if}>WIN SERVER 2016 STD MAK B</option>
+               <option value="WIN SERVER 2012 R2 STD" {if $osname=='WIN SERVER 2012 R2 STD'} selected="selected"{/if}>WIN SERVER 2012 R2 STD</option>
+
+          </select>
+          </td>
+          </tr>
+                   <tr>
+          <td width="251" height="43"  id="normal_text">Operating System-Key<span class="red">*</span></td>
+          <td width="449"><input type="text" name="oskey" value="{$oskey}" size="50"  /></td>
+          </tr>
+                   <tr>
+          <td width="251" height="43"  id="normal_text">Office Name<span class="red">*</span></td>
+          <td width="449">
+                    <select name="officename">
+                    
+           <option value="" style="display:none;">Select MS OFFICE</option>
+           <option value="NO OFFICE FOR SERVER" {if $officename=='NO OFFICE FOR SERVER'} selected="selected"{/if}>NO OFFICE FOR SERVER</option>
+          <option value="MS OFFICE HOME & BUSINESS 2016" {if $officename=='MS OFFICE HOME & BUSINESS 2016'} selected="selected"{/if}>MS OFFICE HOME & BUSINESS 2016</option>
+           <option value="MS OFFICE HOME & BUSINESS 2013" {if $officename=='MS OFFICE HOME & BUSINESS 2013'} selected="selected"{/if}>MS OFFICE HOME & BUSINESS 2013</option>
+            <option value="MS OFFICE HOME & BUSINESS 2010" {if $officename=='MS OFFICE HOME & BUSINESS 2010'} selected="selected"{/if}>MS OFFICE HOME & BUSINESS 2010</option>
+             <option value="MS OFFICE 2007" {if $officename=='MS OFFICE 2007'} selected="selected"{/if}>MS OFFICE 2007</option>
+
+          </select>
+          </td>
+          </tr>
+                   <tr>
+          <td width="251" height="43"  id="normal_text">Office Key<span class="red">*</span></td>
+          <td width="449"><input type="text" name="officekey" value="{$officekey}" size="50"  /></td>
+          </tr>
+                   <tr>
+          <td width="251" height="43"  id="normal_text">Software 1</td>
+          <td width="449"><input type="text" name="sof1" value="{$sof1}" /></td>
+          </tr>
+                   <tr>
+          <td width="251" height="43"  id="normal_text">Software 1-Key</td>
+          <td width="449"><input type="text" name="soft1key" value="{$soft1key}"  /></td>
+          </tr>
+                   <tr>
+          <td width="251" height="43"  id="normal_text">Software 2</td>
+          <td width="449"><input type="text" name="soft2" value="{$soft2}" /></td>
+          </tr>
+                   <tr>
+          <td width="251" height="43"  id="normal_text">Software 2-Key</td>
+          <td width="449"><input type="text" name="soft2key" value="{$soft2key}"  /></td>
+          </tr>
+                   <tr>
+          <td width="251" height="43"  id="normal_text">Software 3</td>
+          <td width="449"><input type="text" name="soft3" value="{$soft3}"  /></td>
+          </tr>
+                   <tr>
+          <td width="251" height="43"  id="normal_text">Software 3-Key</td>
+          <td width="449"><input type="text" name="soft3key" value="{$soft3key}"  /></td>
+          </tr>
+          
+
+        <tr>
+          <td colspan="2" height="60"  align="center"><input type="submit" value="{if $username}UPDATE{else}ADD{/if} LICENSE" class="button" style="cursor:pointer" /></td>
+        </tr>
+        <tr>
+          <td colspan="2" height="80" align="center" class="red">{$display}</td>
+        </tr>
+      </table>
+    </form></td>
+    <!--<td width="84">&nbsp;</td>-->
+  </tr>
+
+    <th colspan="3" bgcolor="#0390B8" height="25">Copyright © 2018 IT- DEPT/SSW GROUP. All rights reserved.</th>
+  </tr>
+  <!-- <tr>
+      <td colspan="3" height="21">&nbsp;</td>
+    </tr
+  <tr>
+ <td colspan="3" height="25">&nbsp;</td>
+ </tr>-->
+</table>
+</body>
+</html>

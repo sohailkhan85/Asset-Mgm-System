@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>iTickets</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+{literal}
+<script type="text/javascript">
+function validate()
+{
+	if(document.srcfrm.src.value=="")
+	{
+		alert("Please make sure that Search Field is not empty.");
+		document.srcfrm.src.focus();
+		return false;
+
+	}
+	else
+	{
+		//alert("inside Submit");
+		document.srcfrm.submit();
+		return true;
+	}
+
+}
+
+/*function signout()
+{
+	//alert('Inside SignOut');
+	window.location.href = 'index.php';
+}*/
+</script>
+{/literal}
+
+
+</head>
+
+<body>
+<table width="1345" height="551"  align="center" cellpadding="0" cellspacing="0" class="tbl" bgcolor="F1F4FE">
+ <tr>
+    <td height="75" colspan="10">
+		<img src="images/header.gif" width="1345" height="125" />
+        </td>
+	</tr>
+
+  <tr>
+   	<td height="455">
+    <form name="srcfrm" id="srcfrm" method="post" action="mainpage.php" onsubmit="validate()">
+	<table width="1345"  border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#F1F4FE">
+
+      
+      <tr>
+            <td colspan="10">
+            <table>
+           <tr>
+           <td><a href="mainpage.php"><img src="images/itickets.gif" width="150" style="cursor:pointer"/></a></td>
+           <td><a href="newiticket.php"><img src="images/new-iticket.gif" width="150" style="cursor:pointer"/></a></td>
+           <td><a href="pclicenses.php"><img src="images/pclicenses.gif" width="150" style="cursor:pointer" /></a></td>
+           <td><a href="adduser.php"><img src="images/adduser.gif" width="150" style="cursor:pointer" /></a></td>
+           <td><a href="viewusers.php"><img src="images/viewusers.gif" width="150" style="cursor:pointer" /></a></td>
+           <td><a href="dashboard.php"><img src="images/dashboard.gif" width="150" style="cursor:pointer" /></a></td>
+           <td width="100"><a href="export_iTicket.php"><img src="images/exp_iTickets.gif" width="150" style="cursor:pointer" /></a></td>
+           <td width="100"><a href="exp_pclicenses.php"><img src="images/exp-licenses.gif" width="150" style="cursor:pointer" /></a></td>
+<!--           <td width="100">&nbsp;</td>
+            <td width="100">&nbsp;</td>
+           <td width="100">&nbsp;</td>
+           <td width="100">&nbsp;</td>
+           <td width="100">&nbsp;</td>
+           <td width="100">&nbsp;</td>
+           <td width="100">&nbsp;</td>-->
+            
+          
+          
+           <td width="100" id="normal_text"><strong><font size=+1>{$display_name}</font></strong></td>
+           
+           
+           </tr>
+           		
+             
+            <tr>
+                    	<td> <input type="radio" name="rad" id="itic" value="p" {if $status=='p'}checked="checked"{/if} onclick="document.getElementById('srcfrm').submit();" /><strong>Pending</strong></td>
+                   	 	<!--<td  id="normal_text"><strong>Pending</strong></td>-->
+                    	<td colspan="2"><input type="radio" name="rad" id="pc" value="c" {if $status=='c'} checked="checked" {/if} onclick="document.getElementById('srcfrm').submit();"/><strong>Completed</strong></td>
+                        
+                    	<!--<td id="normal_text"><strong>Completed</strong></td>-->
+                       
+                <td width="100">&nbsp;</td>
+          		<td width="100">&nbsp;</td>
+          	 	<td width="100">&nbsp;</td>
+           		 <td width="100">&nbsp;</td>
+           		<td width="100">&nbsp;</td>
+<!--                 <td width="100">&nbsp;</td>
+           		<td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>-->
+                <td width="75"><a href="changepass.php"><input type="button" class="button" value="Change Password" style="cursor:pointer"/></a></td>
+               
+            </tr>
+            </table>
+            </td>
+
+      </tr>
+      
+   <tr>
+   <td colspan="10">&nbsp;</td>
+   </tr>   
+   
+      <tr>
+        <td width="75" id="normal_text">{if $iTicket || $search}<strong>SEARCH</strong>{/if}</td>
+        <td width="100">{if $iTicket || $search}<input name="src" type="text" size="50" value="{$search}" />{/if}</td>
+        <td width="100">{if $iTicket || $search}<input type="submit" value="GO" style="cursor:pointer" class="button" />{/if}</td>
+  		 {if $iTicket}
+         <td width="150" id="normal_text">
+         <strong>Total Records = {if $total_records}{$total_records}{/if}
+         </strong>
+         </td>			         
+         {/if}
+                {if $no_ticket || $no_result}
+                <td width="200">&nbsp;</td>
+           		<td width="230">&nbsp;</td>
+                
+              
+                {/if}
+                
+                <td width="100">&nbsp;</td>
+           		<td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                <td width="120">&nbsp;</td>
+                <td width="105">&nbsp;</td>
+                
+        <td width="100" colspan="5">
+        <a href="index.php?val=o" style="cursor:pointer"><input type="button" value="SIGN OUT" name="out" id="out" class="button" style="cursor:pointer"/></a>
+        </td>
+
+      </tr>
+        </form>
+      			<tr>
+					<td colspan="3">
+						<div id="msg" class="error_msg">
+						<tr id="msgtr">
+							<td colspan="2"></td>
+						</tr>
+						</div>
+					</td>
+				</tr>
+   	
+		<tr><td colspan="10">&nbsp;</td></tr>
+	   <tr><td colspan="10" class="red"><strong><font size="+2"> {if $added}Ticket Added Successfully.{elseif $updated}Ticket Updated Successfully.{elseif $assigned}Ticket Assigned Successfully.{elseif $deleted}Ticket Deleted Successfully.{/if}{if $unread}IT Manager has assigned new iTicket to you.{/if}</font></strong></td></tr>
+       {if $no_result == 1 || $no_ticket == 1}
+       
+        	<tr>
+            <td colspan="10" class="red"><strong><font size="+1"> No Record Found.{if $no_result}<a href="mainpage.php">ClICK HERE</a> to go back to main screen.</strong></font>{/if}
+            </td>
+           
+            </tr>
+       {/if}
+       
+
+  <tr>
+    <td colspan="10">
+		<table cellpadding="0" cellspacing="0" border="1"  id="user_record"  align="center" width="1345" height="326" bgcolor="F1F4FE">
+        
+        {if $iTicket} 
+		<tr bgcolor="#0390B8" height="40">
+             <td width="50" align="center" bgcolor="#0390B8">Serial No </td>
+			<td width="109" align="center" bgcolor="#0390B8">Caller Name </td>
+			<td width="107" align="center">Company Name</td>
+			<td width="135" align="center">iTicket Catergory</td>
+            <td width="149" align="center">iTicket Problem</td>
+         	 <!--<td width="146" align="center">Solution</td>-->
+            <td width="144" align="center">Reached/ Start </td>
+            <td width="144" align="center">Left/ Finish</td>
+		
+			<td width="100"align="center">Status</td>
+           {if $display_name=='Administrator'} <td width="100"align="center">Done By</td>{/if}
+           {if $display_name!='Administrator'} <td width="100" align="center">Action </td>{/if}
+  
+
+		  </tr>
+		{/if}	
+        
+       
+        <form id="mainpage" name="mainpage" >
+         	{counter start=0 print=false}
+			{section name=t loop=$iTicket}
+           
+
+            <tr id="normal_text">
+        
+                <td height="26" width="50" align="center">{counter}</td>
+                <td height="26" width="109" align="center" ><a href="viewpc.php?assetid={$iTicket[t][9]}">{$iTicket[t][1]}</a></td>
+			  	<td width="107" align="center">{$iTicket[t][2]}</td>
+			  	<td width="135" align="center">{$iTicket[t][3]}</td>
+		
+			  	<td width="149" align="center">{$iTicket[t][4]}</td>
+              	<!--<td width="146" align="center">{if $iTicket[t][7]=='p'}Job is Pending{else}{$iTicket[t][5]}{/if}</td>-->
+              	<td width="144" align="center">{$iTicket[t][6]}</td>
+                <!--<td width="144" align="center">{if $iTicket[t][7]=='p'}Pending{else}{$iTicket[t][10]}{/if}</td>-->
+                <td width="144" align="center">{$iTicket[t][10]}</td>
+             
+           
+               <td width="100" align="center">{if $iTicket[t][7]=='p'} Pending{elseif $iTicket[t][7]=='c'}Completed{/if}</td>
+               
+               {if $display_name=='Administrator'}<td width="144" align="center">{$iTicket[t][12]}</td>{/if}
+               
+              
+               {if $display_name!='Administrator'}<td width="140" align="center">
+				<a href="newiticket.php?itick_id={$iTicket[t][0]}&company={$iTicket[t][2]}&assetid={$iTicket[t][9]}"><input type="button" name="button" class="button" value="VIEW/UPDATE" style="cursor:pointer" /></a>
+                <a onClick="return confirm('Are you sure to Delete Ticket ?')" href="delete.php?itick_id={$iTicket[t][0]}"><input type="button" name="button" class="button" value="DELETE" style="cursor:pointer" /></a>
+               </td>{/if}
+            
+		  </form>
+			</tr>
+           
+			 {/section}  
+
+          <!--<tr><td>&nbsp;</td></tr>-->
+          
+		  <tr id="paging_text">
+			<td colspan="10" align="center">{$page_numbering}</td>
+		  </tr>
+		 {if !$iTicket}
+          <tr>
+			<td colspan="10" align="center"></td>
+		  </tr>
+		  <tr>
+			<td colspan="10" align="center">&nbsp;</td>
+		  </tr>
+         {/if}
+        
+    </table>
+	</td>
+  </tr>
+  
+ 
+
+	<tr><th colspan="10" bgcolor="#0390B8" height="19">Copyright © 2018 IT- DEPT/SSW GROUP. All rights reserved.</th>
+	</tr>
+   <!-- <tr>
+      <td colspan="3" height="21">&nbsp;</td>
+    </tr
+  <tr>
+ <td colspan="3" height="25">&nbsp;</td>
+ </tr>-->
+</table>
+</body>
+</html>
